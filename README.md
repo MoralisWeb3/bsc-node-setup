@@ -43,7 +43,7 @@ Import the Ethers.js library
         type="application/javascript"></script>
 ```
 
-Then can we can create a JsonRpcProvider using our BSC Node url.
+Then we can create a JsonRpcProvider using our BSC Node url.
 
 ```javascript
 const BSC_NODE_URL = "YOUR MORALIS BSC NODE URL HERE";
