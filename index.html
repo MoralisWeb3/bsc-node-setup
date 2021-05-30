@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>BSC NODE DEMO</title>
+
+        <script 
+            src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js">
+        </script>
+
+    </head>
+
+  
+    <body>
+
+        <p id="blockNumber"></p>
+        <p id="txData"></p>
+
+        <script>
+            const NODE_URL = "https://speedy-nodes-nyc.moralis.io/f5fc8a3c39290b12bb85082f/bsc/mainnet";
+            let web3 = new Web3(new Web3.providers.HttpProvider(NODE_URL));
+
+            web3.eth.getBlockNumber()
+            .then(function(blockNumber) {
+                document.getElementById("blockNumber").innerHTML = "Block number: " + blockNumber;
+            });
+
+            web3.eth.getTransaction('0x779cf00c933b40f249ac98a20f67d767a0859fd797d290cdfc1702447ef00b83')
+            .then(function(txData) {
+                document.getElementById("txData").innerHTML = "Trasaction Data: " + JSON.stringify(txData);
+            });
+        </script>
+    </body>
+
+</html>
