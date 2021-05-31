@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>BSC NODE DEMO</title>
+
+        <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+
+    </head>
+
+  
+    <body>
+
+        <p id="blockNumber"></p>
+        <p id="txData"></p>
+
+        <script>
+            const BSC_NODE_URL = "https://speedy-nodes-nyc.moralis.io/f5fc8a3c39290b12bb85082f/bsc/mainnet";
+            const provider = new ethers.providers.JsonRpcProvider(BSC_NODE_URL);
+
+            provider.getBlockNumber()
+            .then(function(blockNumber) {
+                document.getElementById("blockNumber").innerHTML = "Block number: " + blockNumber;
+            });
+
+            provider.getTransaction('0x779cf00c933b40f249ac98a20f67d767a0859fd797d290cdfc1702447ef00b83')
+            .then(function(txData) {
+                document.getElementById("txData").innerHTML = "Trasaction Data: " + JSON.stringify(txData);
+            });
+        </script>
+    </body>
+
+</html>

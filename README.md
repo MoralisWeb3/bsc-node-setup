@@ -52,15 +52,37 @@ const provider = new ethers.providers.JsonRpcProvider(BSC_NODE_URL);
 
 And that's it! You're dapp is connected to Binance Smart Chain! Now you can query transactions and smart contracts. See the docs for more details.
 
+# Demo
+
+To run the demo clone the repo then navigate to the root directory of the project. From there run a local web server. You will see the current Binance Smart Chain block number displayed and the transaction data for the hash in the demo.
+
+The `index.html` file contains the Web3.js version and the `index-ethers.html` shows the Ethers.js version.
+
+### Using Visual Studio Code with Live Server Extension
+
+If you have an IDE like [Visual Studio Code](https://code.visualstudio.com/) with the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) you can right click on the `index.html` file and select `"Open with Live Server"` from the menu. This will open the web page in the browser on `localhost`.
+
+### Using Python
+
+If you don't use an IDE with a built in web server you can use the one included in Python. For Python 3:
+
+```
+python -m http.server
+```
+
+For older versions of Python:
+```
+python -m SimpleHTTPServer
+```
 
 # Learn More
 
-### Tutorials
+## Tutorials
 
 * [How to Connect to a BSC Node? Full Archive Binance Smart Chain Node - Ivan on Tech Explains](https://youtu.be/o5hIlOuRPeA)
 * [Building BSC Web App - BSC Node Connection - Ivan on Tech Explains](https://youtu.be/_vy5oIXg9uA)
 
-### Docs
+## Docs
 
 * [Moralis](https://docs.moralis.io/)
 * [Web3.js](https://web3js.readthedocs.io/)
